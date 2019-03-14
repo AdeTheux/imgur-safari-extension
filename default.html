@@ -1,0 +1,12 @@
+<!-- Inspired by https://github.com/tomasvitek/safari-google-buttons/-->
+	
+<script type="text/javascript">
+	safari.application.addEventListener("command", goToImgur, false);
+
+	function goToImgur(event){
+		if (event.command == "goToImgur") {		
+			var thisTab = safari.application.activeBrowserWindow.activeTab;
+			thisTab.url = safari.extension.settings.ImgurUrl
+		}
+	}
+</script>
